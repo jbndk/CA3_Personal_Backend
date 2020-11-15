@@ -1,7 +1,6 @@
 package dtos;
 
 import NameEntities.Country;
-import NameEntities.Gender;
 import java.util.ArrayList;
 import java.util.List;
 

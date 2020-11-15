@@ -1,20 +1,14 @@
 package nameFetcher;
 
-import jokefetcher.*;
 import com.google.gson.Gson;
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
-import dtos.ChuckDTO;
-import dtos.CombinedJokesDTO;
 import dtos.CombinedNamesDTO;
 import dtos.CountryDTO;
-import dtos.DadDTO;
 import dtos.GenderDTO;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import utils.HttpUtils;
 
@@ -53,7 +47,6 @@ public static String responseParallel (ExecutorService threadPool, final Gson gs
        CountryDTO country = futureCountry.get();
        
        CombinedNamesDTO combinedDTO = new CombinedNamesDTO(gender, country);
-       //CombinedNamesDTO combinedDTO = new CombinedNamesDTO(gender.getGender(), GENDER_SERVER, country.getCountries(), COUNTRY_SERVER);
        
        String combinedJSON = gson.toJson(combinedDTO);
        
