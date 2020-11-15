@@ -23,8 +23,7 @@ public class CombinedJokesDTO {
         this.joke1Reference = joke1Reference;
         this.joke2=joke2;
         this.joke2Reference=joke2Reference;
-        
-        
+              
     }
 
     public String getJoke1() {
